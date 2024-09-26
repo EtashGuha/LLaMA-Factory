@@ -104,7 +104,7 @@ def load_tokenizer(model_args: "ModelArguments") -> "TokenizerModule":
         setattr(processor, "video_fps", model_args.video_fps)
         setattr(processor, "video_maxlen", model_args.video_maxlen)
     except Exception:
-        processor = None
+        pass
 
     # Avoid load tokenizer, see:
     # https://github.com/huggingface/transformers/blob/v4.40.0/src/transformers/models/auto/processing_auto.py#L324

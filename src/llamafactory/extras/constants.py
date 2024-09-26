@@ -800,6 +800,20 @@ register_model_group(
 
 register_model_group(
     models={
+        "LlamaVision3.2-11B-Instruct": {
+            DownloadSource.DEFAULT: "meta-llama/Llama-3.2-11B-Vision-Instruct",
+        },
+        "LlamaVision3.2-90B-Instruct": {
+            DownloadSource.DEFAULT: "meta-llama/Llama-3.2-90B-Vision-Instruct",
+        },
+    },
+    template="llama3_vl",
+    vision=True,
+)
+
+
+register_model_group(
+    models={
         "LLaVA1.5-7B-Chat": {
             DownloadSource.DEFAULT: "llava-hf/llava-1.5-7b-hf",
         },

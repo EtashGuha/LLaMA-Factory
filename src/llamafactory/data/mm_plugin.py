@@ -4,6 +4,7 @@ from io import BytesIO
 from typing import TYPE_CHECKING, Dict, List, Optional, Sequence, Tuple, TypedDict, Union
 
 import numpy as np
+import torch
 from typing_extensions import override
 
 from ..extras.constants import IGNORE_INDEX, IMAGE_PLACEHOLDER, VIDEO_PLACEHOLDER
@@ -20,7 +21,6 @@ if is_pyav_available():
 
 
 if TYPE_CHECKING:
-    import torch
     from av.stream import Stream
     from transformers import PreTrainedTokenizer, ProcessorMixin
     from transformers.image_processing_utils import BaseImageProcessor
@@ -417,11 +417,55 @@ class Qwen2vlPlugin(BasePlugin):
         return self._get_mm_inputs(images, videos, processor)
 
 
+class Llama3VlPlugin(BasePlugin):
+    @override
+    def process_messages(
+        self,
+        messages: Sequence[Dict[str, str]],
+        images: Sequence["ImageInput"],
+        videos: Sequence["VideoInput"],
+        processor: Optional["ProcessorMixin"],
+    ) -> List[Dict[str, str]]:
+        self._validate_input(images, videos)
+        num_image_tokens = 0
+        messages = deepcopy(messages)
+        for message in messages:
+            content = message["content"]
+            while IMAGE_PLACEHOLDER in content:
+                num_image_tokens += 1
+                content = content.replace(IMAGE_PLACEHOLDER, "<|image|>", 1)
+
+            message["content"] = content
+
+        if len(images) != num_image_tokens:
+            raise ValueError("The number of images does not match the number of {} tokens".format(IMAGE_PLACEHOLDER))
+
+        return messages
+
+    def get_mm_inputs(
+        self,
+        images: Sequence["ImageInput"],
+        videos: Sequence["VideoInput"],
+        imglens: Sequence[int],
+        vidlens: Sequence[int],
+        seqlens: Sequence[int],
+        processor: Optional["ProcessorMixin"],
+    ) -> Dict[str, Union[List[int], "torch.Tensor"]]:
+        super().get_mm_inputs(images, videos, imglens, vidlens, seqlens, processor)
+        if images is not None:
+            images = [Image.open(image) if isinstance(image, str) else image for image in images]
+            image_features = processor.image_processor(images)
+            _ = image_features.pop("num_tiles")
+        image_features = {k: v if isinstance(v, torch.Tensor) else torch.tensor(v) for k, v in image_features.items()}
+        return image_features
+
+
 PLUGINS = {
     "base": BasePlugin,
     "llava": LlavaPlugin,
     "paligemma": PaliGemmaPlugin,
     "qwen2_vl": Qwen2vlPlugin,
+    "llama3_vl": Llama3VlPlugin,
 }
 
 
