@@ -772,7 +772,7 @@ _register_template(
     stop_words=["<|eot_id|>"],
     replace_eos=True,
     replace_jinja_template=False,
-    mm_plugin=get_mm_plugin(name="llama3_vl", image_token="<image>"),
+    mm_plugin=get_mm_plugin(name="llama3_vl", image_token="<|image|>"),
 )
 
 
