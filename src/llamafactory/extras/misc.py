@@ -20,12 +20,21 @@ import os
 from typing import TYPE_CHECKING, Tuple, Union
 
 import torch
+import torch_rdu
+torch_rdu.set_verbose_level(3)
+torch_rdu.set_optimization_level(1)
+torch_rdu.enable_experimental_ops(True)
+torch_rdu.set_mac_resource_scale_global(4)
+torch_rdu.set_enable_default_rule(True)
+torch_rdu.set_o1_rules("/scratch/etashg/LLaMA-Factory/jit_default_rule.yaml")
+
 import transformers.dynamic_module_utils
 from transformers import InfNanRemoveLogitsProcessor, LogitsProcessorList
 from transformers.dynamic_module_utils import get_relative_imports
 from transformers.utils import (
     is_torch_bf16_gpu_available,
     is_torch_cuda_available,
+    is_torch_rdu_available
     is_torch_mps_available,
     is_torch_npu_available,
     is_torch_xpu_available,
@@ -127,6 +136,8 @@ def get_current_device() -> "torch.device":
         device = "mps:{}".format(os.environ.get("LOCAL_RANK", "0"))
     elif is_torch_cuda_available():
         device = "cuda:{}".format(os.environ.get("LOCAL_RANK", "0"))
+    elif is_torch_rdu_available():
+        device="rdu"
     else:
         device = "cpu"
 

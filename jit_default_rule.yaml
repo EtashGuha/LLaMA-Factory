@@ -1,0 +1,247 @@
+# Copyright © 2024 by SambaNova Systems, Inc. Disclosure, reproduction,
+# reverse engineering, or any other use made without the advance written
+# permission of SambaNova Systems, Inc. is unauthorized and strictly
+# prohibited. All rights of ownership and enforcement are reserved.
+
+default_mha_rule_cached:
+    priority: 101
+    heuristic: MHA
+    pattern:
+        cache_k_in:
+            op_type: scatter
+            child: transpose_in
+        transpose_in:
+            op_type: transpose
+            child: matmul_0
+            required: false
+        matmul_0:
+            op_type: matmul
+            child: div
+        div:
+            op_type: div
+            child: mask
+        mask:
+            op_type:
+              - triufill
+              - masked_fill
+              - add
+            required: false
+            child: mask_add
+        mask_add:
+            op_type: add
+            required: false
+            child: softmax
+        softmax:
+            op_type: softmax
+            child: matmul_1
+        cache_v_in:
+            op_type: scatter
+            child: matmul_1
+        matmul_1:
+            op_type: matmul
+            child: transpose_out
+        transpose_out:
+            op_type:
+              - transpose
+              - permute
+            required: false
+            child: reshape
+        reshape:
+            op_type: reshape
+            required: false
+
+default_mha_rule:
+    priority: 100
+    heuristic: MHA
+    pattern:
+        transpose_in:
+            op_type: transpose
+            child: matmul_0
+            required: false
+        matmul_0:
+            op_type: 
+              - matmul
+              - bmm
+            child: optional_unsafe_view_0
+        optional_unsafe_view_0:
+            op_type: _unsafe_view
+            required: false
+            child: div
+        div:
+            op_type: div
+            child: optional_copy0
+        optional_copy0:
+            op_type: copy_
+            required: false
+            child: mask
+        mask:
+            op_type:
+              - triufill
+              - masked_fill_
+              - add
+            required: false
+            child: mask_add
+        mask_add:
+            op_type: add
+            required: false
+            child: softmax
+        softmax:
+            op_type: _softmax
+            child: optional_expand
+        optional_expand:
+            op_type: expand
+            required: False
+            child: optional_view
+        optional_view:
+            op_type: view
+            required: false
+            child: optional_dropout
+        optional_dropout:
+            op_type: dropout
+            required: false
+            child: matmul_1
+        matmul_1:
+            op_type: 
+              - matmul
+              - bmm
+            child: optional_unsafe_view1
+        optional_unsafe_view1:
+            op_type: _unsafe_view
+            required: false
+            child: transpose_out
+        transpose_out:
+            op_type:
+              - transpose
+              - permute
+            required: false
+            child: optional_copy1
+        optional_copy1:
+            op_type: copy_
+            required: false
+            child: reshape
+        reshape:
+            op_type: 
+              - reshape
+              - view
+            required: false
+
+default_sdpa_3d_attn:
+    heuristic: SDPA
+    priority: 30
+    pattern:
+        collect_0:
+            op_type: zipmapreduce
+            child: collect_1
+        collect_1:
+            op_type: zipmapreduce
+            child: sdpa_op
+        sdpa_op:
+            op_type: scaled_dot_product_attention
+            child: sdpa_out_transpose
+        sdpa_out_transpose:
+            op_type: transpose
+            required: false
+
+default_sdpa_cached:
+    mergeable: true
+    heuristic: SDPA
+    priority: 25
+    pattern:
+        optional_input_to_0:
+            op_type: to
+            required: false
+            child: sdpa_op
+        optional_input_to_1:
+            op_type: to
+            required: false
+            child: sdpa_op
+        cache_k_in:
+            op_type: scatter
+            child: sdpa_op
+        cache_v_in:
+            op_type: scatter
+            child: sdpa_op
+        sdpa_op:
+            op_type: scaled_dot_product_attention
+
+default_sdpa_backup:
+    mergeable: true
+    heuristic: SDPA
+    priority: 20
+    pattern:
+        optional_input_to_0:
+            op_type: to
+            required: false
+            child: sdpa_op
+        optional_input_to_1:
+            op_type: to
+            required: false
+            child: sdpa_op
+        sdpa_op:
+            op_type: scaled_dot_product_attention
+
+default_linear_rule:
+    mergeable: true
+    heuristic:
+        name: SAFE_GEMM
+        tp_dim: auto
+    priority: 15
+    pattern:
+        op:
+            op_type:
+              - linear
+              - addmm
+              - conv1d
+
+# default_matmul_rule:
+#     mergeable: true
+#     priority: 10
+#     pattern:
+#         op:
+#             op_type: 
+#               - matmul
+#               - bmm
+
+default_reshape_rule:
+    priority: 9
+    pattern:
+        op:
+            op_type: reshape
+
+default_softmax_rule:
+    priority: 8
+    pattern:
+        op:
+            op_type: _softmax
+
+default_permute_rule:
+    priority: 7
+    pattern:
+        op:
+            op_type: permute
+
+default_embedding_rule:
+    priority: 6
+    pattern:
+        op:
+            op_type: embedding
+
+default_cross_entropy_rule:
+    priority: 5
+    pattern:
+        op:
+            op_type: cross_entropy
+
+default_conv2d_rule:
+    priority: 4
+    mergeable: true
+    pattern:
+        op:
+            op_type: conv2d
+
+default_scatter_rule:
+    priority: 2
+    pattern:
+        op:
+            op_type: scatter
+ 

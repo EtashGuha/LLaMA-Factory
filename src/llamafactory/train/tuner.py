@@ -17,6 +17,14 @@ import shutil
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
 
 import torch
+import torch_rdu
+torch_rdu.set_verbose_level(3)
+torch_rdu.set_optimization_level(1)
+torch_rdu.enable_experimental_ops(True)
+torch_rdu.set_mac_resource_scale_global(4)
+torch_rdu.set_enable_default_rule(True)
+torch_rdu.set_o1_rules("/scratch/etashg/LLaMA-Factory/jit_default_rule.yaml")
+
 from transformers import PreTrainedModel
 
 from ..data import get_template_and_fix_tokenizer
