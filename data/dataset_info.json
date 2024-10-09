@@ -16,6 +16,20 @@
       "tools": "tools"
     }
   },
+  "nidhi": {
+    "hf_hub_url": "nhiremath/HungarianDocQA_IT_SynQA_ocr_v3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
   "glaive_toolcall_zh_demo": {
     "file_name": "glaive_toolcall_zh_demo.json",
     "formatting": "sharegpt",

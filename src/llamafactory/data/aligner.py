@@ -16,6 +16,7 @@ import os
 from functools import partial
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Sequence, Union
 
+from PIL.PngImagePlugin import PngImageFile
 from ..extras.logging import get_logger
 from .data_utils import Role
 
@@ -117,12 +118,20 @@ def convert_alpaca(
 
     convert_images = partial(_convert_images, dataset_attr=dataset_attr, data_args=data_args)
     convert_videos = partial(_convert_videos, dataset_attr=dataset_attr, data_args=data_args)
+
+    if dataset_attr.images and isinstance(example[dataset_attr.images], PngImageFile):
+        _images = convert_images([example[dataset_attr.images]])
+    elif dataset_attr.images:
+        _images = convert_images(example[dataset_attr.images])
+    else:
+        _images = None
+
     output = {
         "_prompt": prompt,
         "_response": response,
         "_system": example[dataset_attr.system] if dataset_attr.system else "",
         "_tools": example[dataset_attr.tools] if dataset_attr.tools else "",
-        "_images": convert_images(example[dataset_attr.images]) if dataset_attr.images else None,
+        "_images": _images, 
         "_videos": convert_videos(example[dataset_attr.videos]) if dataset_attr.videos else None,
     }
     return output
@@ -210,12 +219,20 @@ def convert_sharegpt(
 
     convert_images = partial(_convert_images, dataset_attr=dataset_attr, data_args=data_args)
     convert_videos = partial(_convert_videos, dataset_attr=dataset_attr, data_args=data_args)
+
+    if dataset_attr.images and isinstance(example[dataset_attr.images], PngImageFile):
+        _images = convert_images([example[dataset_attr.images]])
+    elif dataset_attr.images:
+        _images = convert_images(example[dataset_attr.images])
+    else:
+        _images = None
+    
     output = {
         "_prompt": prompt,
         "_response": response,
         "_system": system,
         "_tools": example[dataset_attr.tools] if dataset_attr.tools else "",
-        "_images": convert_images(example[dataset_attr.images]) if dataset_attr.images else None,
+        "_images": _images,
         "_videos": convert_videos(example[dataset_attr.videos]) if dataset_attr.videos else None,
     }
     return output
@@ -249,7 +266,8 @@ def align_dataset(
             load_from_cache_file=(not data_args.overwrite_cache) or (training_args.local_process_index != 0),
             desc="Converting format of dataset",
         )
-
+    breakpoint()
+    convert_func(dataset[0])
     return dataset.map(
         convert_func,
         batched=False,
