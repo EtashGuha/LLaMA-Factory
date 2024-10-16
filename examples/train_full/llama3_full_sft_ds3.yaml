@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+model_name_or_path: /scratch/etashg/ckpts/Meta-Llama-3-8B-Instruct
 
 ### method
 stage: sft
@@ -23,6 +23,7 @@ overwrite_output_dir: true
 
 ### train
 per_device_train_batch_size: 1
+gradient_checkpointing: False
 gradient_accumulation_steps: 2
 learning_rate: 1.0e-5
 num_train_epochs: 3.0

@@ -34,7 +34,7 @@ from transformers.dynamic_module_utils import get_relative_imports
 from transformers.utils import (
     is_torch_bf16_gpu_available,
     is_torch_cuda_available,
-    is_torch_rdu_available
+    is_torch_rdu_available,
     is_torch_mps_available,
     is_torch_npu_available,
     is_torch_xpu_available,
