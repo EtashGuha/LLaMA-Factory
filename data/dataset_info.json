@@ -17,7 +17,7 @@
     }
   },
   "nidhi": {
-    "hf_hub_url": "nhiremath/HungarianDocQA_IT_SynQA_ocr_v3",
+    "hf_hub_url": "nhiremath/HungarianDocQA_IT_SynQA_ocr_v3_cleaned",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",

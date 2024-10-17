@@ -445,8 +445,17 @@ class Llama3VlPlugin(BasePlugin):
         processor: Optional["ProcessorMixin"],
     ) -> Dict[str, Union[List[int], "torch.Tensor"]]:
         self._get_mm_inputs(images, videos, processor)
+
+        def load_image(image):
+            if isinstance(image, str):
+                Image.open(image)
+            elif isinstance(image, dict) and 'bytes' in image:
+                image = Image.open(BytesIO(image["bytes"]))
+            else:
+                image = Image.open(image["path"])
+            return image
         if images is not None:
-            images = [Image.open(image) if isinstance(image, str) else image for image in images]
+            images = [load_image(image) for image in images]
             image_features = processor.image_processor(images)
             _ = image_features.pop("num_tiles")
         image_features = {k: v if isinstance(v, torch.Tensor) else torch.tensor(v) for k, v in image_features.items()}

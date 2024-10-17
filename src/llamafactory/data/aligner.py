@@ -13,12 +13,16 @@
 # limitations under the License.
 
 import os
+import pandas as pd 
 from functools import partial
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Sequence, Union
-
+from PIL import Image
+import io
+from tqdm import tqdm
 from PIL.PngImagePlugin import PngImageFile
 from ..extras.logging import get_logger
 from .data_utils import Role
+import datasets
 
 
 if TYPE_CHECKING:
@@ -72,7 +76,6 @@ def _convert_videos(
 
     return videos
 
-
 def convert_alpaca(
     example: Dict[str, Any],
     dataset_attr: "DatasetAttr",
@@ -119,13 +122,13 @@ def convert_alpaca(
     convert_images = partial(_convert_images, dataset_attr=dataset_attr, data_args=data_args)
     convert_videos = partial(_convert_videos, dataset_attr=dataset_attr, data_args=data_args)
 
-    if dataset_attr.images and isinstance(example[dataset_attr.images], PngImageFile):
-        _images = convert_images([example[dataset_attr.images]])
+    if dataset_attr.images and not isinstance(example[dataset_attr.images], List):
+        _images = [example[dataset_attr.images]]
     elif dataset_attr.images:
         _images = convert_images(example[dataset_attr.images])
     else:
         _images = None
-
+    
     output = {
         "_prompt": prompt,
         "_response": response,
@@ -266,11 +269,13 @@ def align_dataset(
             load_from_cache_file=(not data_args.overwrite_cache) or (training_args.local_process_index != 0),
             desc="Converting format of dataset",
         )
-    breakpoint()
-    convert_func(dataset[0])
-    return dataset.map(
+
+    mapped_dataset = dataset.map(
         convert_func,
         batched=False,
         remove_columns=column_names,
+        keep_in_memory=True,
         **kwargs,
     )
+
+    return mapped_dataset
