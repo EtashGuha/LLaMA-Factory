@@ -21,9 +21,9 @@ from typing import TYPE_CHECKING, Tuple, Union
 
 import torch
 import torch_rdu
-torch_rdu.set_verbose_level(3)
-torch_rdu.set_optimization_level(1)
-torch_rdu.set_o1_experimental_opts(True)
+torch_rdu.set_verbose_level(2)
+torch_rdu.set_optimization_level(0)
+# torch_rdu.set_o1_experimental_opts(True)
 torch_rdu.set_mac_resource_scale_global(4)
 torch_rdu.set_enable_default_rule(True)
 torch_rdu.set_o1_rules("/scratch/etashg/LLaMA-Factory/jit_default_rule.yaml")
