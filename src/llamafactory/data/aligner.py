@@ -123,7 +123,7 @@ def convert_alpaca(
     convert_videos = partial(_convert_videos, dataset_attr=dataset_attr, data_args=data_args)
 
     if dataset_attr.images and not isinstance(example[dataset_attr.images], List):
-        _images = [example[dataset_attr.images]]
+        _images = convert_images([example[dataset_attr.images]])
     elif dataset_attr.images:
         _images = convert_images(example[dataset_attr.images])
     else:
@@ -223,7 +223,7 @@ def convert_sharegpt(
     convert_images = partial(_convert_images, dataset_attr=dataset_attr, data_args=data_args)
     convert_videos = partial(_convert_videos, dataset_attr=dataset_attr, data_args=data_args)
 
-    if dataset_attr.images and isinstance(example[dataset_attr.images], PngImageFile):
+    if dataset_attr.images and not isinstance(example[dataset_attr.images], List):
         _images = convert_images([example[dataset_attr.images]])
     elif dataset_attr.images:
         _images = convert_images(example[dataset_attr.images])

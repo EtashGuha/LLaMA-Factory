@@ -156,12 +156,12 @@ def get_image_seqlen(config: "PretrainedConfig") -> int:
             image_seqlen += 1
     elif model_type == "paligemma":
         image_seqlen = config.vision_config.num_image_tokens
-    else:
-        image_seqlen = -1
     elif model_type == "mllama":
         image_seqlen = (
             (config.vision_config.image_size // config.vision_config.patch_size) ** 2 + 1
         ) * config.vision_config.max_num_tiles
+    else:
+        image_seqlen = -1
 
     return image_seqlen
 
