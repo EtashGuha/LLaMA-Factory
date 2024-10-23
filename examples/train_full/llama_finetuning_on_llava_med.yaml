@@ -18,7 +18,7 @@ preprocessing_num_workers: 4
 eval_dataset: llava-med-val
 per_device_eval_batch_size: 1
 eval_strategy: steps
-eval_steps: 100
+eval_steps: 793
 
 ### output
 output_dir: saves/llama-3.2-11b/full/sft
