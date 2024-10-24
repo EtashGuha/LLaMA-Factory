@@ -19,12 +19,12 @@ from typing import TYPE_CHECKING, Any, Dict, List, Optional
 import torch
 import torch_rdu
 torch_rdu.set_verbose_level(2)
-torch_rdu.set_optimization_level(0)
-# torch_rdu.set_o1_experimental_opts(True)
-torch_rdu.set_mac_resource_scale_global(4)
+torch_rdu.set_optimization_level(1)
+torch_rdu.set_o1_experimental_opts(True)
+torch_rdu.set_mac_resource_scale_global(16)
 torch_rdu.set_enable_default_rule(True)
-torch_rdu.set_o1_rules("/scratch/etashg/LLaMA-Factory/jit_default_rule.yaml")
-
+torch_rdu.set_o1_rules("/scratch/etashg/LLaMA-Factory/jit_default_rule_v3.yaml")
+torch_rdu.set_torch_rdu_combined_pef("/scratch1/josephp/llama3_8b_pefs/llama3_8b_o1_attempt1.pef")
 from transformers import PreTrainedModel
 
 from ..data import get_template_and_fix_tokenizer
