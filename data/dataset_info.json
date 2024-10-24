@@ -650,5 +650,33 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "adi-finetune-train": {
+    "hf_hub_url": "/import/ml-sc-scratch5/vamsik/llava_finetuning/SN-LLaVA/adi_data_phase_2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "adi-finetune-val": {
+    "hf_hub_url": "/import/ml-sc-scratch5/vamsik/llava_finetuning/SN-LLaVA/adi_data_phase_2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
   }
 }
