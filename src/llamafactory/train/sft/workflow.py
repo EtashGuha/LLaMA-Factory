@@ -17,6 +17,8 @@
 
 from typing import TYPE_CHECKING, List, Optional
 
+import torch_rdu
+
 from ...data import SFTDataCollatorWith4DAttentionMask, get_dataset, get_template_and_fix_tokenizer
 from ...extras.constants import IGNORE_INDEX
 from ...extras.misc import get_logits_processor
@@ -93,7 +95,10 @@ def run_sft(
 
     # Training
     if training_args.do_train:
+        torch_rdu.start_profile()
         train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
+        torch_rdu.end_profile()
+        torch_rdu.save_profile('/scratch1/etashg/train_perf_prof.json')
         trainer.save_model()
         trainer.log_metrics("train", train_result.metrics)
         trainer.save_metrics("train", train_result.metrics)

@@ -27,7 +27,7 @@ torch_rdu.set_o1_experimental_opts(True)
 torch_rdu.set_mac_resource_scale_global(16)
 torch_rdu.set_enable_default_rule(True)
 torch_rdu.set_o1_rules("/scratch/etashg/LLaMA-Factory/jit_default_rule_v3.yaml")
-torch_rdu.set_torch_rdu_combined_pef("/scratch1/josephp/llama3_8b_pefs/llama3_8b_o1_attempt1.pef")
+# torch_rdu.set_torch_rdu_combined_pef("/scratch1/josephp/llama3_8b_pefs/llama3_8b_o1_attempt1.pef")
 import transformers.dynamic_module_utils
 from transformers import InfNanRemoveLogitsProcessor, LogitsProcessorList
 from transformers.dynamic_module_utils import get_relative_imports
