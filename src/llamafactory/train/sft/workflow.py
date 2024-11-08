@@ -29,10 +29,31 @@ from .metric import ComputeAccuracy, ComputeSimilarity, eval_logit_processor
 from .trainer import CustomSeq2SeqTrainer
 
 
+from transformers import TrainerCallback
 if TYPE_CHECKING:
     from transformers import Seq2SeqTrainingArguments, TrainerCallback
 
     from ...hparams import DataArguments, FinetuningArguments, GeneratingArguments, ModelArguments
+
+class CustomStepCallback(TrainerCallback):
+    def __init__(self):
+        self.current_step = 0
+    
+    def on_step_begin(self, args, state, control, **kwargs):
+        self.current_step += 1
+        if self.current_step == 4:
+            torch_rdu.start_profile()
+
+    def on_step_end(self, args, state, control, **kwargs):
+        if self.current_step == 4:
+            # Your custom function here
+            torch_rdu.end_profile()
+            torch_rdu.save_profile('/scratch1/etashg/train_perf_prof_step4.json')
+    
+    def custom_function(self):
+        # Replace this with whatever you want to do on step 7
+        print("Executing custom function on step 7!")
+        # Example: Save model, log metrics, modify learning rate, etc.
 
 
 def run_sft(
@@ -76,6 +97,7 @@ def run_sft(
         metric_module["preprocess_logits_for_metrics"] = eval_logit_processor
 
     # Initialize our Trainer
+    callbacks.append(CustomStepCallback())
     trainer = CustomSeq2SeqTrainer(
         model=model,
         args=training_args,
