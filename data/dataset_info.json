@@ -21,7 +21,7 @@
       "formatting": "sharegpt",
       "columns": {
 	  "messages": "messages",
-	  "images": "image"
+	  "images": "images"
       },
       "tags": {
 	  "role_tag": "role",

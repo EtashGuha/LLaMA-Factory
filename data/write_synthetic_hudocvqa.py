@@ -39,7 +39,7 @@ if __name__ == '__main__':
                 'role': 'user'
             },
             {
-                'content': 'answer',
+                'content': answer,
                 'role': 'assistant'
             }
         ]

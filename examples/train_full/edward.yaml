@@ -8,7 +8,7 @@ finetuning_type: full
 deepspeed: /nvmedata/jonathanl/LLaMA-Factory/examples/deepspeed/jonathan.json
 
 ### dataset
-dataset: nidhi
+dataset: makcedward_hudocvqa_11_06_2024
 template: llama3_vl
 cutoff_len: 4096
 overwrite_cache: true

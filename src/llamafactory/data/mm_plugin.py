@@ -448,7 +448,7 @@ class Llama3VlPlugin(BasePlugin):
 
         def load_image(image):
             if isinstance(image, str):
-                Image.open(image)
+                image = Image.open(image)
             elif isinstance(image, dict) and 'bytes' in image:
                 image = Image.open(BytesIO(image["bytes"]))
             else:
