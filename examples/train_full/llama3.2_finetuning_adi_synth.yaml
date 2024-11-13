@@ -5,40 +5,40 @@ model_name_or_path: /import/ml-sc-nlpcheckpoints-scratch3/jonathanl/generic_chec
 stage: sft  # Supervised Fine-Tuning
 do_train: true
 finetuning_type: full  # Full fine-tuning (adjust if using LoRA or other methods)
-deepspeed: /import/ml-sc-scratch5/viekashv/llama3_2_finetuning/LLaMA-Factory/examples/deepspeed/jonathan.json
+deepspeed: /import/ml-sc-scratch5/viekashv/llama3_2_finetuning/LLaMA-Factory/examples/deepspeed/ds_z3_offload_config.json
 
 ### dataset
-dataset: adi-finetune-train  # Your training dataset from dataset_info.json
+dataset: adi-synth-finetune  # Your training dataset from dataset_info.json
 template: llama3_vl  # Template format (can be changed based on your use case)
-cutoff_len: 8192  # Maximum sequence length
+cutoff_len: 4096  # Maximum sequence length
 overwrite_cache: true
-preprocessing_num_workers: 4  # Adjust based on your system capacity
+preprocessing_num_workers: 8  # Adjust based on your system capacity
 
 ### eval
-eval_dataset: adi-finetune-val  # Your evaluation dataset from dataset_info.json
-per_device_eval_batch_size: 4  # Adjust based on GPU memory
+val_size: 0.1
+per_device_eval_batch_size: 2
 eval_strategy: steps
-eval_steps: 100  # Evaluate every 100 steps
+eval_steps: 50
 
 ### output
 output_dir: /import/ml-sc-scratch5/viekashv/llama_finetune_output  # Directory to save the fine-tuned model
 logging_steps: 1  # Log every 10 steps
-save_steps: 5000  # Save model every 5000 steps
+save_steps: 500  # Save model every 5000 steps
 plot_loss: true
 overwrite_output_dir: true
 
 ### train
-per_device_train_batch_size: 4  # Adjust based on your GPU memory
-gradient_accumulation_steps: 8  # Adjust based on memory and batch size
-learning_rate: 2.0e-5  # Fine-tuning learning rate
-num_train_epochs: 3  # Number of epochs to train
+per_device_train_batch_size: 2  # Adjust based on your GPU memory
+gradient_accumulation_steps: 128  # Adjust based on memory and batch size
+learning_rate: 1.0e-5  # Fine-tuning learning rate
+num_train_epochs: 1  # Number of epochs to train
 lr_scheduler_type: cosine  # Learning rate schedule (e.g., cosine, linear)
-warmup_ratio: 0.03  # Warmup ratio for learning rate
+warmup_ratio: 0.1  # Warmup ratio for learning rate
 weight_decay: 0.0  # Weight decay
 bf16: true  # Enable bfloat16 (set to true if supported by your hardware)
 ddp_timeout: 180000000  # Timeout for distributed training
 
 ### report 
 report_to: wandb  # Reporting platform (WandB)
-run_name: "llama_finetune_adi_data"  # Custom run name for tracking
+run_name: "llama_finetune_adi_synth_data"  # Custom run name for tracking
 

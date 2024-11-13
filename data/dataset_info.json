@@ -651,32 +651,32 @@
     },
     "folder": "python"
   },
-  "adi-finetune-train": {
-    "hf_hub_url": "/import/ml-sc-scratch5/vamsik/llava_finetuning/SN-LLaVA/adi_data_phase_2",
+  "adi-synth-finetune": {
+    "file_name": "/import/ml-sc-scratch5/viekashv/llama3_2_finetuning/LLaMA-Factory/dataset/adi_synth/questions.json",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "conversations",
-      "images": "image"
+      "messages": "messages",
+      "images": "images"
     },
     "tags": {
-      "role_tag": "from",
-      "content_tag": "value",
-      "user_tag": "human",
-      "assistant_tag": "gpt"
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
     }
   },
-  "adi-finetune-val": {
-    "hf_hub_url": "/import/ml-sc-scratch5/vamsik/llava_finetuning/SN-LLaVA/adi_data_phase_2",
+  "adi-synth-test": {
+    "file_name": "/import/ml-sc-scratch3/viekashv/cache/adi-eval-reformatted/test/dataset_info.json",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "conversations",
-      "images": "image"
+      "messages": "messages",
+      "images": "images"
     },
     "tags": {
-      "role_tag": "from",
-      "content_tag": "value",
-      "user_tag": "human",
-      "assistant_tag": "gpt"
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
     }
   }
 }
