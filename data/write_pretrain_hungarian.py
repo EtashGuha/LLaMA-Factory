@@ -6,7 +6,7 @@ import math
 import numpy as np
 from tqdm import tqdm
 
-DATAROOT = Path('/nvmedata/jonathanl/LLaMA-Factory/data')
+DATAROOT = Path('/import/ml-sc-scratch1/jonathanl/EtashGuha-LLaMA-Factory/data')
 SEED = 42
 IMG_TOKEN = '<image>'
 DATASETS = [
@@ -43,12 +43,12 @@ HUNGARIAN_PROMPTS = [
 ]
 
 def construct_messages(datapoint, img_root, idx, rng):
-    if i == 0:
+    if idx == 0:
         num_decimals = 1
     else:
-        num_decimals = math.floor(math.log(i, 10)) + 1
+        num_decimals = math.floor(math.log(idx, 10)) + 1
     num_zeros = 5 - num_decimals
-    img_path = img_root / ('0' * num_zeros + str(i) + '.png')
+    img_path = img_root / ('0' * num_zeros + str(idx) + '.png')
     datapoint['image'].save(img_path)
     messages = []
     english_prompt = rng.choice([0, 1])
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     rng = np.random.RandomState(seed=SEED)
     train_conversations = []
     for split, dataset_name in zip(['train', 'test'], DATASETS):
-        ds = load_dataset(dataset_name, split=split, cache_dir='/nvmedata/jonathanl/hf_cache')
+        ds = load_dataset(dataset_name, split=split, cache_dir='/import/ml-sc-scratch3/jonathanl/cache')
         img_root = DATAROOT / dataset_name.split('/')[-1] / split
         img_root.mkdir(parents=True, exist_ok=True)
         idx_set = set()
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     split = 'val'
     img_root = DATAROOT / dataset_name.split('/')[-1] / split
     img_root.mkdir(parents=True, exist_ok=True)
-    ds = load_dataset(dataset_name, split=split, cache_dir='/nvmedata/jonathanl/hf_cache')
+    ds = load_dataset(dataset_name, split=split, cache_dir='/import/ml-sc-scratch3/jonathanl/cache')
     idx_set = set()
     for datapoint in tqdm(ds, total=len(ds), dynamic_ncols=True, desc=f'{dataset_name} {split} split'):
         if datapoint['image_idx'] in idx_set:
