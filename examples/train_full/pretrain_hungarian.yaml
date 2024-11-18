@@ -8,15 +8,16 @@ finetuning_type: full
 deepspeed: /import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/examples/deepspeed/jonathan.json
 
 ### dataset
-dataset: makcedward_hudocvqa_11_06_2024
+dataset: hungarian_pretrain_train_11_14_2024
+eval_dataset: hungarian_pretrain_val_11_14_2024
 template: llama3_vl
-cutoff_len: 4096
+cutoff_len: 2048
 overwrite_cache: true
 preprocessing_num_workers: 16
 
 
 ### output
-output_dir: /import/ml-sc-nlpcheckpoints-scratch2/jonathanl/finetuning_results/llama3.2_finetuning/makcedward_sft_11_15_24_idc
+output_dir: /import/ml-sc-nlpcheckpoints-scratch2/jonathanl/finetuning_results/llama3.2_finetuning/pretrain_hungarian_11_15_24_idc
 logging_steps: 10
 save_steps: 500
 plot_loss: true
@@ -24,7 +25,7 @@ overwrite_output_dir: true
 
 ### wandb
 report_to: wandb
-run_name: lr1e-5_gbs64_11_15_24
+run_name: lr1e-5_gbs64_ss2048_11_15_24
 
 ### train
 per_device_train_batch_size: 4

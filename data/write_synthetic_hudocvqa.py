@@ -6,14 +6,14 @@ import math
 import numpy as np
 from tqdm import tqdm
 
-DATAROOT = Path('/nvmedata/jonathanl/LLaMA-Factory/data')
+DATAROOT = Path('/import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/data')
 SEED = 42
 IMG_TOKEN = '<image>'
 
 if __name__ == '__main__':
     DATAROOT.mkdir(exist_ok=True)
     metadata_dict = dict()
-    ds = load_dataset('makcedward/hudocvqa', cache_dir='/nvmedata/jonathanl/hf_cache')
+    ds = load_dataset('makcedward/hudocvqa', cache_dir='/import/ml-sc-scratch3/jonathanl/cache')
     img_root = DATAROOT / 'makcedward_hudocvqa_11_06_2024'
     img_root.mkdir(exist_ok=True)
     split = 'train'

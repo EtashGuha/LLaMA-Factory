@@ -30,6 +30,34 @@
 	  "assistant_tag": "assistant"
       }
   },
+  "hungarian_pretrain_train_11_14_2024": {
+      "file_name": "hungarian_pretrain_train_11_14_2024.json",
+      "formatting": "sharegpt",
+      "columns": {
+	  "messages": "messages",
+	  "images": "images"
+      },
+      "tags": {
+	  "role_tag": "role",
+	  "content_tag": "content",
+	  "user_tag": "user",
+	  "assistant_tag": "assistant"
+      }
+  },
+  "hungarian_pretrain_val_11_14_2024": {
+      "file_name": "hungarian_pretrain_val_11_14_2024.json",
+      "formatting": "sharegpt",
+      "columns": {
+	  "messages": "messages",
+	  "images": "images"
+      },
+      "tags": {
+	  "role_tag": "role",
+	  "content_tag": "content",
+	  "user_tag": "user",
+	  "assistant_tag": "assistant"
+      }
+  },
   "nidhi": {
     "hf_hub_url": "nhiremath/HungarianDocQA_IT_SynQA_ocr_v3_cleaned",
     "formatting": "sharegpt",

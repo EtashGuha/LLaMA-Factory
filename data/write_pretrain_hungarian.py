@@ -6,7 +6,7 @@ import math
 import numpy as np
 from tqdm import tqdm
 
-DATAROOT = Path('/import/ml-sc-scratch1/jonathanl/EtashGuha-LLaMA-Factory/data')
+DATAROOT = Path('/import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/data')
 SEED = 42
 IMG_TOKEN = '<image>'
 DATASETS = [
