@@ -73,6 +73,10 @@ def run_sft(
         metric_module["compute_metrics"] = ComputeAccuracy()
         metric_module["preprocess_logits_for_metrics"] = eval_logit_processor
 
+    # set weight grads for vision encoder to False 
+    for p in model.vision_model.parameters():
+        p.requires_grad = False 
+
     # Initialize our Trainer
     trainer = CustomSeq2SeqTrainer(
         model=model,
@@ -90,7 +94,7 @@ def run_sft(
     gen_kwargs["eos_token_id"] = [tokenizer.eos_token_id] + tokenizer.additional_special_tokens_ids
     gen_kwargs["pad_token_id"] = tokenizer.pad_token_id
     gen_kwargs["logits_processor"] = get_logits_processor()
-
+    
     # Training
     if training_args.do_train:
         train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
