@@ -4,11 +4,13 @@ model_name_or_path: /import/ml-sc-nlpcheckpoints-scratch3/jonathanl/generic_chec
 ### method
 stage: sft
 do_train: true
+do_eval: true
 finetuning_type: full
 deepspeed: /import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/examples/deepspeed/jonathan.json
 
 ### dataset
-dataset: makcedward_hudocvqa_11_06_2024
+dataset: makcedward_hudocvqa_11_06_2024_train
+eval_dataset: makcedward_hudocvqa_11_06_2024_val
 template: llama3_vl
 cutoff_len: 4096
 overwrite_cache: true
@@ -16,20 +18,22 @@ preprocessing_num_workers: 16
 
 
 ### output
-output_dir: /import/ml-sc-nlpcheckpoints-scratch2/jonathanl/finetuning_results/llama3.2_finetuning/makcedward_sft_11_15_24_idc
+output_dir: /import/ml-sc-nlpcheckpoints-scratch2/jonathanl/finetuning_results/llama3.2_finetuning/makcedward_sft/lr5e-5_gbs64_11_19_24_idc
 logging_steps: 10
-save_steps: 500
+save_steps: 250
 plot_loss: true
 overwrite_output_dir: true
+save_total_limit: 1
 
 ### wandb
 report_to: wandb
-run_name: lr1e-5_gbs64_11_15_24
+run_name: lr1e-6_gbs64_11_18_24
 
 ### train
 per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
 gradient_accumulation_steps: 4
-learning_rate: 1.0e-5
+learning_rate: 1.0e-6
 num_train_epochs: 1
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
