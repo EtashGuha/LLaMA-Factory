@@ -17,7 +17,7 @@
     }
   },
   "makcedward_hudocvqa_11_06_2024_train": {
-      "file_name": "makcedward_hudocvqa_11_06_2024_train.json",
+      "file_name": "/import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/data/makcedward_hudocvqa_11_06_2024_train.json",
       "formatting": "sharegpt",
       "columns": {
 	  "messages": "messages",
@@ -31,7 +31,7 @@
       }
   },
   "makcedward_hudocvqa_11_06_2024_val": {
-      "file_name": "makcedward_hudocvqa_11_06_2024_val.json",
+      "file_name": "/import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/data/makcedward_hudocvqa_11_06_2024_val.json",
       "formatting": "sharegpt",
       "columns": {
 	  "messages": "messages",
@@ -45,7 +45,7 @@
       }
   },
   "makcedward_hudocvqa_11_06_2024_test": {
-      "file_name": "makcedward_hudocvqa_11_06_2024_test.json",
+      "file_name": "/import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/data/makcedward_hudocvqa_11_06_2024_test.json",
       "formatting": "sharegpt",
       "columns": {
 	  "messages": "messages",
