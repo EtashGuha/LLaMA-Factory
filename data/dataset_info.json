@@ -58,6 +58,20 @@
 	  "assistant_tag": "assistant"
       }
   },
+  "etashg_hudocvqa_11_06_2024_train": {
+      "file_name": "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA_12_04_2024_train.json",
+      "formatting": "sharegpt",
+      "columns": {
+          "messages": "messages",
+          "images": "images"
+      },
+      "tags": {
+          "role_tag": "role",
+          "content_tag": "content",
+          "user_tag": "user",
+          "assistant_tag": "assistant"
+      }
+  },
   "hungarian_pretrain_train_11_14_2024": {
       "file_name": "hungarian_pretrain_train_11_14_2024.json",
       "formatting": "sharegpt",
