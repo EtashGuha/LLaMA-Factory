@@ -1,0 +1,407 @@
+[
+  {
+    "messages": [
+      {
+        "content": "<image>\nMeddig van lehet\u0151s\u00e9g lemondani a Pr\u00e9mium szolg\u00e1ltat\u00e1st?",
+        "role": "user"
+      },
+      {
+        "content": "Adott h\u00f3nap utols\u00f3 munkanapj\u00e1n 17 \u00f3r\u00e1ig",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00000.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nA b\u00e1zis sz\u00e1ml\u00e1hoz h\u00e1ny Junior szolg\u00e1ltat\u00e1s ig\u00e9nyelhet\u0151?",
+        "role": "user"
+      },
+      {
+        "content": "Egy",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00001.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMikort\u00f3l hat\u00e1lyos a hirdetm\u00e9ny?",
+        "role": "user"
+      },
+      {
+        "content": "2024. m\u00e1jus 30.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00002.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nSz\u00fcneteltethet\u0151 a banksz\u00e1mla?",
+        "role": "user"
+      },
+      {
+        "content": "Nem",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00003.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMilyen t\u00edpus\u00fa bankk\u00e1rtya a webk\u00e1rtya?",
+        "role": "user"
+      },
+      {
+        "content": "Mastercard",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00004.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMennyibe ker\u00fcl a Start banksz\u00e1mla nyit\u00e1sa?",
+        "role": "user"
+      },
+      {
+        "content": "D\u00edjmentes",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00005.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMinek az automatikus fel\u00fclvizsg\u00e1lat\u00e1ra \u00e9s m\u00f3dos\u00edt\u00e1s\u00e1ra jogosult a bank?",
+        "role": "user"
+      },
+      {
+        "content": "Keret\u00f6sszeg",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00006.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMikor volt a F\u00fav\u00f3szenekari Min\u0151s\u00edt\u0151 Fesztiv\u00e1l?",
+        "role": "user"
+      },
+      {
+        "content": "2019. \u00e1prilis 13",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00007.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMik rendelhet\u0151ek a Smart sz\u00e1mlacsomaghoz?",
+        "role": "user"
+      },
+      {
+        "content": "Kedvezm\u00e9nycsomagok",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00008.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1nyadik pont sz\u00f3l a a 2014. m\u00e1rcius 15-t\u0151l k\u00f6t\u00f6tt szem\u00e9lyi k\u00f6lcs\u00f6n szerz\u0151d\u00e9sekr\u0151l",
+        "role": "user"
+      },
+      {
+        "content": "12",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00009.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMi az OTP Bank tev\u00e9kenys\u00e9gi enged\u00e9ly sz\u00e1ma?",
+        "role": "user"
+      },
+      {
+        "content": "983/1997/F",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00010.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1ny napos a felmond\u00e1si id\u0151?",
+        "role": "user"
+      },
+      {
+        "content": "30",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00011.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMelyik t\u00f6rv\u00e9ny sz\u00f3l a p\u00e9nz\u00fcgyi v\u00e1llalkoz\u00e1sokr\u00f3l?",
+        "role": "user"
+      },
+      {
+        "content": "2013.\u00e9vi CCXXXVII. T\u00f6rv\u00e9ny",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00012.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMir\u0151l sz\u00f3l a 2016. \u00e9vi CXXX. T\u00f6rv\u00e9ny?",
+        "role": "user"
+      },
+      {
+        "content": "Polg\u00e1ri Perrendtart\u00e1sr\u00f3l",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00013.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMi sz\u0171nik meg az \u00dcgyf\u00e9l \u00e1ltali visszavon\u00e1ssal?",
+        "role": "user"
+      },
+      {
+        "content": "A meghatalmaz\u00e1s",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00014.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMennyi id\u0151 alatt k\u00f6telez\u0151 v\u00e1laszolni az \u00fcgylettel \u00f6sszef\u00fcgg\u0151 egym\u00e1shoz int\u00e9zett k\u00e9rd\u00e9sekre",
+        "role": "user"
+      },
+      {
+        "content": "30 napon bel\u00fcl",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00015.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nAz OTP Bank Nyrt. milyen sz\u00f3beli m\u00f3dokon tarthat kapcsolatot az \u00fcgyf\u00e9llel?",
+        "role": "user"
+      },
+      {
+        "content": "Telefonon \u00e9s bankfi\u00f3kban",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00016.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nHol t\u00e1j\u00e9koztatja az OTP Bank Nyrt. a panaszkezel\u00e9s rendj\u00e9r\u0151l \u00fcgyfeleit?",
+        "role": "user"
+      },
+      {
+        "content": "Panaszkezel\u00e9si Szab\u00e1lyzatban",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00017.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMi a k\u00fcl\u00f6nbs\u00e9g az OTP Mobil Kft. \u00e1ltal k\u00edn\u00e1lt k\u00e9t szolg\u00e1ltat\u00e1s k\u00f6z\u00f6tt?",
+        "role": "user"
+      },
+      {
+        "content": "A SimplePay Online Fizet\u00e9si Rendszer online el\u00e9rhet\u0151 a www.simplepay.hu oldalon, m\u00edg a Simple Mobilalkalmaz\u00e1s egy okostelefonr\u00f3l el\u00e9rhet\u0151 mobiltelefonos alkalmaz\u00e1s.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00018.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nHol \u00e9rhet\u0151 el a bank korrupci\u00f3 ellenes politik\u00e1ja?",
+        "role": "user"
+      },
+      {
+        "content": "https://www.otpbank.hu/static/portal/sw/file/Korrupcioellenes_Politika.pdf",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00019.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMennyi id\u0151 alatt k\u00f6teles az \u00fcgyf\u00e9l a bankot \u00e9rtes\u00edteni?",
+        "role": "user"
+      },
+      {
+        "content": "Halad\u00e9ktalanul",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00020.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1ny munkanappal el\u0151re kell bejelenteni 5 milli\u00f3 forintot meghalad\u00f3 k\u00e9szp\u00e9nzfelv\u00e9telt?",
+        "role": "user"
+      },
+      {
+        "content": "Legal\u00e1bb 2 munkanappal",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00021.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nA szem\u00e9lyes adatokra vonatkoz\u00f3 rendelkez\u00e9seket melyik almell\u00e9klet tartalmazza?",
+        "role": "user"
+      },
+      {
+        "content": "5",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00022.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMi a c\u00edme annak a k\u00f6nyvnek, amelynek bor\u00edt\u00f3j\u00e1n l\u00f3 van?",
+        "role": "user"
+      },
+      {
+        "content": "H\u00e9tl\u00e1b\u00fa parip\u00e1k \u00e9s j\u00f3 boszork\u00e1nyok",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00023.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1ny f\u0151 van a term\u00e9szetv\u00e9delmi \u0151rszolg\u00e1latban?",
+        "role": "user"
+      },
+      {
+        "content": "34 f\u0151",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00024.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMilyen form\u00e1tumot r\u00e9szes\u00edtenek el\u0151nyben a weboldalon?",
+        "role": "user"
+      },
+      {
+        "content": "PDF",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00025.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMi a c\u00edme a Blaha Lujza \u00c9tteremben 15:00 \u00f3rakor kezd\u0151d\u0151 rendezv\u00e9nynek?",
+        "role": "user"
+      },
+      {
+        "content": "\u201eA reformkori n\u0151alak\u201d",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/train/00026.png"
+    ]
+  }
+]
