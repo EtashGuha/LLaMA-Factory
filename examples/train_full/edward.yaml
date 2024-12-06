@@ -18,7 +18,7 @@ preprocessing_num_workers: 16
 
 
 ### output
-output_dir: /import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/finetuning_results/lr1e-6_gbs32_with_half_test_data_merged_12_04_24_idc
+output_dir: /import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/finetuning_results/lr1e-6_gbs32_with_half_test_data_merged_12_06_24_idc
 logging_steps: 10
 save_steps: 200
 eval_strategy: steps
@@ -29,7 +29,7 @@ save_total_limit: 10
 
 ### wandb
 report_to: wandb
-run_name: lr1e-6_gbs32_12_04_24
+run_name: lr1e-6_gbs32_with_merged_test_12_06_24
 
 ### train
 per_device_train_batch_size: 2
