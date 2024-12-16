@@ -16,6 +16,48 @@
       "tools": "tools"
     }
   },
+  "jonathanl_hudocvqa_12_16_2024_train": {
+      "file_name": "jonathanl_hudocvqa_12_16_2024_train.json",
+      "formatting": "sharegpt",
+      "columns": {
+	  "messages": "messages",
+	  "images": "images"
+      },
+      "tags": {
+	  "role_tag": "role",
+	  "content_tag": "content",
+	  "user_tag": "user",
+	  "assistant_tag": "assistant"
+      }
+  },
+  "jonathanl_hudocvqa_12_16_2024_val": {
+      "file_name": "jonathanl_hudocvqa_12_16_2024_val.json",
+      "formatting": "sharegpt",
+      "columns": {
+	  "messages": "messages",
+	  "images": "images"
+      },
+      "tags": {
+	  "role_tag": "role",
+	  "content_tag": "content",
+	  "user_tag": "user",
+	  "assistant_tag": "assistant"
+      }
+  },
+  "jonathanl_hudocvqa_12_16_2024_test": {
+      "file_name": "jonathanl_hudocvqa_12_16_2024_test.json",
+      "formatting": "sharegpt",
+      "columns": {
+	  "messages": "messages",
+	  "images": "images"
+      },
+      "tags": {
+	  "role_tag": "role",
+	  "content_tag": "content",
+	  "user_tag": "user",
+	  "assistant_tag": "assistant"
+      }
+  },
   "makcedward_hudocvqa_11_06_2024_train": {
       "file_name": "makcedward_hudocvqa_11_06_2024_train.json",
       "formatting": "sharegpt",
