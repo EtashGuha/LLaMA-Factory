@@ -123,8 +123,6 @@ class Template:
                 elements += self.format_observation.apply(content=message["content"])
             elif message["role"] == Role.FUNCTION.value:
                 elements += self.format_function.apply(content=message["content"])
-            elif message["role"] == Role.SYSTEM.value:
-                elements += self.format_function.apply(content=message["content"])
             else:
                 raise NotImplementedError("Unexpected role: {}".format(message["role"]))
             #if {'bos_token'} in elements: 
