@@ -10,7 +10,7 @@ deepspeed: /import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory
 
 ### dataset
 dataset: jonathanl_hudocvqa_12_16_2024_train
-eval_dataset :jonathanl_hudocvqa_12_16_2024_val
+eval_dataset: jonathanl_hudocvqa_12_16_2024_val
 template: llama3_vl
 cutoff_len: 4096
 overwrite_cache: true
