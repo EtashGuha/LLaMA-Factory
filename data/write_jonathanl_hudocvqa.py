@@ -37,7 +37,6 @@ if __name__ == '__main__':
                 question_text = question + '\n' + IMG_TOKEN
             else:
                 question_text = IMG_TOKEN + '\n' + question
-                breakpoint()
             messages = [
                 {
                     'content': question_text,
