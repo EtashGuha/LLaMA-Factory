@@ -10,12 +10,12 @@ deepspeed: /import/ml-sc-scratch4/shubhangiu/etash_fork/LLaMA-Factory/examples/d
 ### dataset
 dataset: llava-med-train  
 template: llama3_vl
-cutoff_len: 2048
+cutoff_len: 1024
 overwrite_cache: true
 preprocessing_num_workers: 4
 
 ### output
-output_dir: saves/llama-3.2-11b_with_frozen_vit_and_bigger_BS/full/sft
+output_dir: /import/ml-sc-scratch5/shubhangiu/llama_3.2_checkpoints/saves/llama-3.2-11b_lower_lr_with_sys_prompt/full/sft
 logging_steps: 1
 save_steps: 396
 plot_loss: true
@@ -24,14 +24,21 @@ overwrite_output_dir: true
 ### train
 per_device_train_batch_size: 2 
 gradient_accumulation_steps: 16
-learning_rate: 2.0e-5
+learning_rate: 1.0e-6
 num_train_epochs: 3
 lr_scheduler_type: cosine
 warmup_ratio: 0.03
-weight_decay: 0.
+weight_decay: 0.0
 bf16: true
 ddp_timeout: 180000000
 save_total_limit: 10
+
+
+### eval
+eval_dataset: llava-med-val
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 396 
 
 ### report 
 report_to: wandb

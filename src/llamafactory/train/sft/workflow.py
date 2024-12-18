@@ -74,8 +74,8 @@ def run_sft(
         metric_module["preprocess_logits_for_metrics"] = eval_logit_processor
 
     # set weight grads for vision encoder to False 
-    for p in model.vision_model.parameters():
-        p.requires_grad = False 
+    #for p in model.vision_model.parameters():
+    #    p.requires_grad = False 
 
     # Initialize our Trainer
     trainer = CustomSeq2SeqTrainer(

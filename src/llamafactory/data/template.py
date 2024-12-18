@@ -123,9 +123,12 @@ class Template:
                 elements += self.format_observation.apply(content=message["content"])
             elif message["role"] == Role.FUNCTION.value:
                 elements += self.format_function.apply(content=message["content"])
+            elif message["role"] == Role.SYSTEM.value:
+                elements += self.format_function.apply(content=message["content"])
             else:
                 raise NotImplementedError("Unexpected role: {}".format(message["role"]))
-
+            #if {'bos_token'} in elements: 
+            #    elements.insert(1, "A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions.<|eot_id|>")
             encoded_messages.append(self._convert_elements_to_ids(tokenizer, elements))
 
         return encoded_messages

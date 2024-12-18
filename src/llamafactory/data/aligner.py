@@ -229,7 +229,7 @@ def convert_sharegpt(
         _images = convert_images(example[dataset_attr.images])
     else:
         _images = None
-    
+
     output = {
         "_prompt": prompt,
         "_response": response,
