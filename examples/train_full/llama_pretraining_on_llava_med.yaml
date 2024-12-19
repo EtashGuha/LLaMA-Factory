@@ -15,7 +15,7 @@ overwrite_cache: true
 preprocessing_num_workers: 4
 
 ### output
-output_dir: /import/ml-sc-scratch5/shubhangiu/llama_3.2_checkpoints/saves/llama-3.2-11b_llava_med_pretraining/full/sft
+output_dir: /import/ml-sc-scratch3/shubhangiu/llama_3.2_checkpoints/saves/llama-3.2-11b_llava_med_pretraining/full/sft
 logging_steps: 1
 save_steps: 300
 plot_loss: true
