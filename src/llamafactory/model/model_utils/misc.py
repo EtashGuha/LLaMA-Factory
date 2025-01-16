@@ -34,7 +34,7 @@ def find_all_linear_modules(model: "PreTrainedModel", freeze_vision_tower: bool)
         forbidden_modules.add("output_layer")
     elif model_type == "internlm2":
         forbidden_modules.add("output")
-    elif model_type in ["llava", "paligemma"]:
+    elif model_type in ["llava", "paligemma", "mllama"]:
         forbidden_modules.add("multi_modal_projector")
     elif model_type == "qwen2_vl":
         forbidden_modules.add("merger")
@@ -44,7 +44,6 @@ def find_all_linear_modules(model: "PreTrainedModel", freeze_vision_tower: bool)
             forbidden_modules.add("visual")
         else:
             forbidden_modules.add("vision_tower")
-
     module_names = set()
     for name, module in model.named_modules():
         if any(forbidden_module in name for forbidden_module in forbidden_modules):

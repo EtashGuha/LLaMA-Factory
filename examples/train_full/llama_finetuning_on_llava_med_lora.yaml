@@ -4,8 +4,9 @@ model_name_or_path: /import/ml-sc-scratch3/shubhangiu/llama_3.2_checkpoints/save
 ### method
 stage: sft
 do_train: true
-finetuning_type: full
+finetuning_type: lora
 deepspeed: /import/ml-sc-scratch4/shubhangiu/etash_fork/LLaMA-Factory/examples/deepspeed/ds_z3_offload_config.json
+lora_target: ['k_proj', 'v_proj', 'q_proj', 'o_proj', 'multi_modal_projector']
 
 ### dataset
 dataset: llava-med-train  
@@ -15,7 +16,7 @@ overwrite_cache: true
 preprocessing_num_workers: 4
 
 ### output
-output_dir: /import/ml-sc-scratch3/shubhangiu/llama_3.2_checkpoints/saves/llama-3.2-11b_llava_med_pretraining/full/sft/finetuning_with_checkpoint_3651_with_sys_prompt 
+output_dir: /import/ml-sc-scratch3/shubhangiu/llama_3.2_checkpoints/saves/llama-3.2-11b_llava_med_pretraining/full/sft/finetuning_with_checkpoint_3651_with_lora_with_mm_projector 
 logging_steps: 1
 save_steps: 396
 plot_loss: true

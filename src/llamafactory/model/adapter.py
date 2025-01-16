@@ -191,7 +191,6 @@ def _setup_lora_tuning(
                 model = PeftModel.from_pretrained(model, adapter_to_resume, is_trainable=is_trainable, **init_kwargs)
 
         logger.info("Loaded adapter(s): {}".format(",".join(model_args.adapter_name_or_path)))
-
     if is_trainable and adapter_to_resume is None:  # create new lora weights while training
         if len(finetuning_args.lora_target) == 1 and finetuning_args.lora_target[0] == "all":
             target_modules = find_all_linear_modules(model, finetuning_args.freeze_vision_tower)
@@ -202,7 +201,6 @@ def _setup_lora_tuning(
             target_modules = find_expanded_modules(model, target_modules, finetuning_args.freeze_trainable_layers)
 
         target_modules = patch_target_modules(model.config, finetuning_args, target_modules)
-
         if (
             finetuning_args.use_dora
             and getattr(model, "quantization_method", None) is not None
@@ -230,7 +228,6 @@ def _setup_lora_tuning(
             "use_dora": finetuning_args.use_dora,
             "modules_to_save": finetuning_args.additional_target,
         }
-
         if model_args.use_unsloth:
             model = get_unsloth_peft_model(model, model_args, peft_kwargs)
         else:
