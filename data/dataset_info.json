@@ -748,5 +748,33 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "adi-synth-finetune": {
+    "file_name": "/import/ml-sc-scratch5/viekashv/llama3_2_finetuning/LLaMA-Factory/dataset/adi_synth/questions.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "adi-synth-test": {
+    "file_name": "/import/ml-sc-scratch3/viekashv/cache/adi-eval-reformatted/test/dataset_info.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
   }
 }

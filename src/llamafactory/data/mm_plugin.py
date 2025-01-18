@@ -448,12 +448,13 @@ class Llama3VlPlugin(BasePlugin):
 
         def load_image(image):
             if isinstance(image, str):
-                image = Image.open(image)
+                return Image.open(image)
             elif isinstance(image, dict) and 'bytes' in image:
-                image = Image.open(BytesIO(image["bytes"]))
+                return Image.open(BytesIO(image["bytes"]))
+            elif isinstance(image, dict) and 'path' in image:
+                return Image.open(image["path"])
             else:
-                image = Image.open(image["path"])
-            return image
+                raise ValueError("Unsupported image format")
         if images is not None:
             images = [load_image(image) for image in images]
             image_features = processor.image_processor(images)

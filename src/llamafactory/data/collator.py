@@ -88,7 +88,7 @@ class MultiModalDataCollatorForSeq2Seq(DataCollatorForSeq2Seq):
             batch_imglens.append(len(images))
             batch_vidlens.append(len(videos))
             batch_seqlens.append(len(feature["input_ids"]))
-
+        
         mm_inputs = self.template.mm_plugin.get_mm_inputs(
             batch_images, batch_videos, batch_imglens, batch_vidlens, batch_seqlens, self.processor
         )
