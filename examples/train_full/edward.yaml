@@ -6,10 +6,10 @@ stage: sft
 do_train: true
 do_eval: true
 finetuning_type: full
-deepspeed: /import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/examples/deepspeed/jonathan.json
+deepspeed: /import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/examples/deepspeed/jonathan.json
 
 ### dataset
-dataset: makcedward_hudocvqa_11_06_2024_train
+dataset: [makcedward_hudocvqa_11_06_2024_train, etashg_hudocvqa_11_06_2024_train]
 eval_dataset: makcedward_hudocvqa_11_06_2024_val
 template: llama3_vl
 cutoff_len: 4096
@@ -18,19 +18,21 @@ preprocessing_num_workers: 16
 
 
 ### output
-output_dir: /import/ml-sc-nlpcheckpoints-scratch2/jonathanl/finetuning_results/llama3.2_finetuning/makcedward_sft/lr5e-5_gbs64_11_19_24_idc
+output_dir: /import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/finetuning_results/lr1e-6_gbs32_with_half_test_data_merged_12_06_24_idc
 logging_steps: 10
-save_steps: 250
+save_steps: 200
+eval_strategy: steps
+eval_steps:  200
 plot_loss: true
 overwrite_output_dir: true
-save_total_limit: 1
+save_total_limit: 10  
 
 ### wandb
 report_to: wandb
-run_name: lr1e-6_gbs64_11_18_24
+run_name: lr1e-6_gbs32_with_merged_test_12_06_24
 
 ### train
-per_device_train_batch_size: 4
+per_device_train_batch_size: 2
 per_device_eval_batch_size: 4
 gradient_accumulation_steps: 4
 learning_rate: 1.0e-6
