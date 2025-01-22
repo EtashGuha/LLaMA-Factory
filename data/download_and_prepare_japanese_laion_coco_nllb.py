@@ -97,6 +97,10 @@ class HuggingFaceDatasetWrapper(Dataset):
 
 def download_image_from_url(image_id, image_url, save_dir):
     img_path = save_dir / f'{image_id}.jpg'
+
+    if os.path.exists(img_path):
+        return img_path
+    
     try:
         response = requests.get(image_url, timeout=2)
         if response.status_code == 200:
@@ -124,10 +128,6 @@ def validate_image(img_path):
             os.remove(img_path)
 
     return False
-
-
-def collate_fn(batch):
-    return batch
 
 
 def read_src_json(filepath):
@@ -173,7 +173,7 @@ def main():
 
         batch_size = 1
         num_workers = 64
-        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers, collate_fn=collate_fn)
+        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
 
         total_num_examples = len(dataset)
         num_examples_processed = 0
