@@ -198,34 +198,6 @@
 	  "assistant_tag": "assistant"
       }
   },
-  "laion_coco_japanese_01_16_25_train": {
-      "file_name": "laion_coco_japanese_01_16_25_train.json",
-      "formatting": "sharegpt",
-      "columns": {
-    "messages": "messages",
-    "images": "images"
-      },
-      "tags": {
-    "role_tag": "role",
-    "content_tag": "content",
-    "user_tag": "user",
-    "assistant_tag": "assistant"
-      }
-  },
-  "laion_coco_japanese_01_16_25_test": {
-      "file_name": "laion_coco_japanese_01_16_25_test.json",
-      "formatting": "sharegpt",
-      "columns": {
-    "messages": "messages",
-    "images": "images"
-      },
-      "tags": {
-    "role_tag": "role",
-    "content_tag": "content",
-    "user_tag": "user",
-    "assistant_tag": "assistant"
-      }
-  },
   "makcedward_hudocvqa_11_06_2024_val": {
       "file_name": "makcedward_hudocvqa_11_06_2024_val.json",
       "formatting": "sharegpt",
