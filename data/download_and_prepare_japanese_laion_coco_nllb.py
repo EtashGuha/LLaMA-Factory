@@ -15,9 +15,6 @@ IMG_TOKEN = '<image>'
 DATAROOT = Path('/import/ml-sc-scratch5/vamsik/mm_ml_llms/datasets/liaon_coco_jap')
 DATAROOT.mkdir(exist_ok=True)
 
-print(f"HF_HOME: {os.getenv('HF_HOME')}")
-print(f"HF_DATASETS_CACHE: {os.getenv('HF_DATASETS_CACHE')}")
-
 os.environ["HF_HOME"] = "/import/ml-sc-scratch5/vamsik/hf_cache"
 os.environ["HF_DATASETS_CACHE"] = "/import/ml-sc-scratch5/vamsik/hf_cache"
 
