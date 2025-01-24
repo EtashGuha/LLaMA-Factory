@@ -1,0 +1,38 @@
+### model
+model_name_or_path: /import/ml-sc-nlpcheckpoints-scratch3/jonathanl/generic_checkpoints/llama3.2/Llama-3.2-11B-Vision-Instruct
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: /import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/examples/deepspeed/jonathan.json
+
+### dataset
+dataset: cauldron_ja_01_13_2025_train
+template: llama3_vl
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+
+### output
+output_dir: /import/ml-sc-nlpcheckpoints-scratch2/jonathanl/finetuning_results/llama3.2_finetuning/cauldron_ja_sft/lr1e-6_gbs256_01_14_25_idc
+logging_steps: 10
+save_steps: 2000
+plot_loss: true
+overwrite_output_dir: true
+save_total_limit: 5
+
+### wandb
+report_to: wandb
+run_name: cauldron_ja_lr1e-6_gbs256_01_14_25
+
+### train
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 16
+learning_rate: 1.0e-6
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000

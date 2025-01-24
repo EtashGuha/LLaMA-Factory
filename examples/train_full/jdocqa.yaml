@@ -1,0 +1,43 @@
+### model
+model_name_or_path: /import/ml-sc-nlpcheckpoints-scratch3/jonathanl/generic_checkpoints/llama3.2/Llama-3.2-11B-Vision-Instruct
+
+### method
+stage: sft
+do_train: true
+do_eval: true
+finetuning_type: full
+deepspeed: /import/ml-sc-scratch1/jonathanl/repositories/EtashGuha-LLaMA-Factory/examples/deepspeed/jonathan.json
+
+### dataset
+dataset: jdocqa_01_21_25_train
+eval_dataset: jdocqa_01_21_25_val
+template: llama3_vl
+cutoff_len: 1024
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+
+### output
+output_dir: /import/ml-sc-nlpcheckpoints-scratch2/jonathanl/finetuning_results/llama3.2_finetuning/jdocqa_sft/lr1e-6_gbs32_01_21_25_idc
+logging_steps: 1
+save_steps: 50
+plot_loss: true
+overwrite_output_dir: true
+save_total_limit: 5
+
+### wandb
+report_to: wandb
+run_name: pretrain_ja_lr1e-6_gbs256_01_18_25
+
+### train
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
+gradient_accumulation_steps: 2
+learning_rate: 1.0e-6
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+eval_strategy: steps
+eval_steps: 50
