@@ -198,6 +198,90 @@
 	  "assistant_tag": "assistant"
       }
   },
+  "laion_coco_japanese_01_16_25_train": {
+      "file_name": "laion_coco_japanese_01_16_25_train.json",
+      "formatting": "sharegpt",
+      "columns": {
+    "messages": "messages",
+    "images": "images"
+      },
+      "tags": {
+    "role_tag": "role",
+    "content_tag": "content",
+    "user_tag": "user",
+    "assistant_tag": "assistant"
+      }
+  },
+  "laion_coco_japanese_01_16_25_test": {
+      "file_name": "laion_coco_japanese_01_16_25_test.json",
+      "formatting": "sharegpt",
+      "columns": {
+    "messages": "messages",
+    "images": "images"
+      },
+      "tags": {
+    "role_tag": "role",
+    "content_tag": "content",
+    "user_tag": "user",
+    "assistant_tag": "assistant"
+      }
+  },
+  "palo_non_vg_dataset_jap_02_03_2025_train": {
+      "file_name": "palo_non_vg_dataset_jap_02_03_2025.json",
+      "formatting": "sharegpt",
+      "columns": {
+	  "messages": "messages",
+	  "images": "images"
+      },
+      "tags": {
+	  "role_tag": "role",
+	  "content_tag": "content",
+	  "user_tag": "user",
+	  "assistant_tag": "assistant"
+      }
+  },
+  "visual_genome_jap_01_24_2025_train": {
+    "file_name": "visual_genome_jap_01_24_2025.json",
+    "formatting": "sharegpt",
+    "columns": {
+  "messages": "messages",
+  "images": "images"
+    },
+    "tags": {
+  "role_tag": "role",
+  "content_tag": "content",
+  "user_tag": "user",
+  "assistant_tag": "assistant"
+    }
+  },
+  "docqa_nonbinary_jap_01_27_2025_train": {
+    "file_name": "docqa_nonbinary_jap_train_01_27_2025.json",
+    "formatting": "sharegpt",
+    "columns": {
+  "messages": "messages",
+  "images": "images"
+    },
+    "tags": {
+  "role_tag": "role",
+  "content_tag": "content",
+  "user_tag": "user",
+  "assistant_tag": "assistant"
+    }
+  },
+  "docqa_nonbinary_jap_01_27_2025_val": {
+    "file_name": "docqa_nonbinary_jap_val_01_27_2025.json",
+    "formatting": "sharegpt",
+    "columns": {
+  "messages": "messages",
+  "images": "images"
+    },
+    "tags": {
+  "role_tag": "role",
+  "content_tag": "content",
+  "user_tag": "user",
+  "assistant_tag": "assistant"
+    }
+  },
   "makcedward_hudocvqa_11_06_2024_val": {
       "file_name": "makcedward_hudocvqa_11_06_2024_val.json",
       "formatting": "sharegpt",

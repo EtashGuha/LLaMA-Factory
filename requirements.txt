@@ -15,7 +15,7 @@ pydantic
 fastapi
 sse-starlette
 matplotlib>=3.7.0
-fire
+numpy<2.0.0
 packaging
 pyyaml
-numpy<2.0.0
+fire
