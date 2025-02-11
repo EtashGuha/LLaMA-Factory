@@ -70,12 +70,7 @@ class HuggingFaceDatasetWrapper(Dataset):
             multi_lingual_captions_list = row['captions']
             for language, caption in multi_lingual_captions_list:
                 if language == "jpn_Jpan":
-                    question = self.state.choice(JP_CAPTION_PROMPTS)
-                    question_before = self.state.choice(range(2))
-                    if question_before == 0:
-                        question_text = question + '\n' + IMG_TOKEN
-                    else:
-                        question_text = IMG_TOKEN + '\n' + question
+                    question_text = IMG_TOKEN + '\n' + question
                     messages = [
                         {
                             'content': question_text,
