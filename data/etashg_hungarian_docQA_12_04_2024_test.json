@@ -1,0 +1,407 @@
+[
+  {
+    "messages": [
+      {
+        "content": "<image>\nMekkora a maxim\u00e1lis fesz\u00fclts\u00e9g, amelyen egy ide\u00e1lis fesz\u00fclts\u00e9ger\u0151s\u00edt\u0151 m\u00e9rhet\u0151?",
+        "role": "user"
+      },
+      {
+        "content": "1mV bemenet, 10V kimenet",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00000.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nHavonta \u00e1tlagosan h\u00e1nyan keresik fel a Meska.hu-t?",
+        "role": "user"
+      },
+      {
+        "content": "t\u00f6bb mint 610 ezer l\u00e1togat\u00f3\n\nt\u00f6bb mint 610 000 l\u00e1togat\u00f3\n\n>610 000 l\u00e1togat\u00f3",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00001.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nA legt\u00f6bb hallgat\u00f3 csak az aktu\u00e1lis iskolai v\u00e9gzetts\u00e9g\u00e9nek megfelel\u0151 ERASMUS+ \u00f6szt\u00f6nd\u00edjra p\u00e1ly\u00e1zhat. Mi a kiv\u00e9tel?",
+        "role": "user"
+      },
+      {
+        "content": "Di\u00e1kok, akik az utols\u00f3 f\u00e9l\u00e9vben jelentkeznek alapk\u00e9pz\u00e9s\u00fckre.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00002.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMekkora az MLD 6 mm-es csepegtet\u0151cs\u0151 nyom\u00e1startom\u00e1nya?",
+        "role": "user"
+      },
+      {
+        "content": "70 - 280 kPa\n\n0,7 - 2,8 bar\n\n0.7 - 2.8 bar",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00003.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\n2021-ben melyik h\u00f3napban volt a legmagasabb a l\u00e1togat\u00f3k sz\u00e1ma?",
+        "role": "user"
+      },
+      {
+        "content": null,
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00004.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMelyik megy\u00e9ben tal\u00e1lhat\u00f3 Pal\u00e1st?",
+        "role": "user"
+      },
+      {
+        "content": "Hont megye\n\nHont",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00005.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMennyivel el\u0151re kell \u00e9rtes\u00edteni az egyes\u00fclet eln\u00f6k\u00e9t az eseti bizotts\u00e1g \u00fcl\u00e9se el\u0151tt?",
+        "role": "user"
+      },
+      {
+        "content": "3 nap",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00006.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMelyik oldalon van a BME G\u00e9p\u00e9szm\u00e9rn\u00f6ki Kar?",
+        "role": "user"
+      },
+      {
+        "content": "20. oldal",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00007.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMelyik k\u00eds\u00e9rlet t\u00e1rgyalja az elektrom\u00e1gneses indukci\u00f3t?",
+        "role": "user"
+      },
+      {
+        "content": "k\u00eds\u00e9rlet 13",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00008.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1ny sz\u00e1zal\u00e9kkal cs\u00f6kkent a p\u00f3rusok \u00e1tm\u00e9r\u0151je a SKIN BIOLIFT GEL haszn\u00e1lata ut\u00e1n?",
+        "role": "user"
+      },
+      {
+        "content": "26%",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00009.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nA hajfest\u00e9kek melyik \u00f6sszetev\u0151j\u00e9re volt allergi\u00e1s Alan?",
+        "role": "user"
+      },
+      {
+        "content": "ammonia",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00010.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nKi k\u00e9sz\u00edtette a k\u00e9pet a t\u00f6megr\u0151l?",
+        "role": "user"
+      },
+      {
+        "content": "Bar\u00e1z Csaba",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00011.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMilyen \u00e1llatok jellemz\u0151ek a B\u00fckk vid\u00e9k\u00e9re?",
+        "role": "user"
+      },
+      {
+        "content": "hi\u00fazok, medv\u00e9k, farkasok",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00012.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMely nemzeti parkokat eml\u00edti ez a dokumentum?",
+        "role": "user"
+      },
+      {
+        "content": "B\u00fckki Nemzeti Park \u00e9s Aggteleki Nemzeti Park",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00013.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nKi a tan\u00e1cs Levezet\u0151 eln\u00f6k?",
+        "role": "user"
+      },
+      {
+        "content": "P\u00f6l\u00f6skei G\u00e1born\u00e9",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00014.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMi Arrabona telefonsz\u00e1ma?",
+        "role": "user"
+      },
+      {
+        "content": "(96) 515-630",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00015.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1ny k\u00f6vet\u0151je van csake mentesnek?",
+        "role": "user"
+      },
+      {
+        "content": "t\u00f6bb mint 20000 k\u00f6vet\u0151je van\n\nt\u00f6bb mint 20 ezer k\u00f6vet\u0151je van\n\n>20000 k\u00f6vet\u0151\n\n>20 ezer k\u00f6vet\u0151je",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00016.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMelyek a legakt\u00edvabb \u00f6sszetev\u0151k?",
+        "role": "user"
+      },
+      {
+        "content": "D\u00e9l-amerikai par\u00e1zs, ez\u00fcstf\u0171, v\u00f6r\u00f6s sz\u0151l\u0151lev\u00e9l kivonat \u00e9s hialuronsav",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00017.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMilyen hajterm\u00e9keket k\u00edn\u00e1l a Natura?",
+        "role": "user"
+      },
+      {
+        "content": "sampon, balzsam \u00e9s arg\u00e1nolaj",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00018.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMilyen hossz\u00fa a BVF-WFD/1000-10 k\u00e1bel?",
+        "role": "user"
+      },
+      {
+        "content": "100 m\u00e9ter",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00019.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1ny tanul\u00f3 vett r\u00e9szt a tizedik oszt\u00e1lyban a felm\u00e9r\u00e9s matematikai v\u00e1ltozat\u00e1t?",
+        "role": "user"
+      },
+      {
+        "content": "75891",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00020.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMilyen hajt\u00edpusokra alkalmas a m\u00e9lytiszt\u00edt\u00f3 sampon?",
+        "role": "user"
+      },
+      {
+        "content": "minden hajt\u00edpus\n\nminden hajt\u00edpusra, k\u00fcl\u00f6n\u00f6sen a zs\u00edros hajra",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00021.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMekkora a kertv\u00e1rosias lak\u00f3ter\u00fclet be\u00e9p\u00edt\u00e9si s\u0171r\u0171s\u00e9ge?",
+        "role": "user"
+      },
+      {
+        "content": "0.6",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00022.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nHol \u00e9lnek a SOMIT tagjai?",
+        "role": "user"
+      },
+      {
+        "content": "Sv\u00e9dorsz\u00e1gban",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00023.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nHol tal\u00e1lhat\u00f3ak meg az OTPDirektre vonatkoz\u00f3 r\u00e9szletes kond\u00edci\u00f3k",
+        "role": "user"
+      },
+      {
+        "content": "OTPdirekt szolg\u00e1ltat\u00e1sok Kond\u00edci\u00f3s Lista Lakoss\u00e1gi \u00fcgyfelek r\u00e9sz\u00e9re",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00024.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nH\u00e1ny \u00e9v alatti sz\u00e1mlatulajdonos ig\u00e9nyelhet P\u00e1lyakezd\u0151 kedvezm\u00e9nyt",
+        "role": "user"
+      },
+      {
+        "content": "28",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00025.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>\nMilyen gyakoris\u00e1ggal jogosult az OTP fel\u00fclvizsg\u00e1lni a d\u00edjkedvezm\u00e9ny felt\u00e9teleit?",
+        "role": "user"
+      },
+      {
+        "content": "\u00c9vente",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "/import/ml-sc-scratch5/shubhangiu/etash_fork_multilingual/LLaMA-Factory/data/etashg_hungarian_docQA/test/00026.png"
+    ]
+  }
+]
