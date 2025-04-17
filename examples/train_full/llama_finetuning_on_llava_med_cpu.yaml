@@ -1,0 +1,44 @@
+### model
+model_name_or_path: /import/ml-sc-scratch3/shubhangiu/llama_3.2_checkpoints/saves/llama-3.2-11b_llava_med_pretraining/full/sft/checkpoint-3651
+
+### method
+stage: sft
+do_train: true
+finetuning_type: freeze
+
+### dataset
+dataset: llava-med-train
+template: llama3_vl
+cutoff_len: 8
+overwrite_cache: true
+preprocessing_num_workers: 4
+max_samples: 2
+
+### output
+output_dir: /import/ml-sc-scratch6/lang/llama_3.2_checkpoints_cpu
+logging_steps: 1
+save_steps: 1
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 1
+learning_rate: 1.0e-6
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.0
+bf16: false
+ddp_timeout: 180000000
+save_total_limit: 10
+
+
+### eval
+eval_dataset: llava-med-val
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 1
+
+### report
+run_name: test_run
