@@ -4,7 +4,7 @@ model_name_or_path: /import/ml-sc-scratch3/shubhangiu/llama_3.2_checkpoints/save
 ### method
 stage: sft
 do_train: true
-finetuning_type: full
+finetuning_type: freeze
 deepspeed: /import/ml-sc-scratch4/shubhangiu/etash_fork/LLaMA-Factory/examples/deepspeed/ds_z3_offload_config.json
 
 ### dataset
@@ -13,12 +13,12 @@ template: llama3_vl
 cutoff_len: 64
 overwrite_cache: true
 preprocessing_num_workers: 4
-max_samples: 50
+max_samples: 8
 
 ### output
 output_dir: /import/ml-sc-scratch6/lang/llama_3.2_checkpoints_gpu
-logging_steps: 5
-save_steps: 10
+logging_steps: 1
+save_steps: 4
 plot_loss: true
 overwrite_output_dir: true
 
@@ -39,7 +39,7 @@ save_total_limit: 10
 eval_dataset: llava-med-val
 per_device_eval_batch_size: 1
 eval_strategy: steps
-eval_steps: 10
+eval_steps: 2
 
 ### report
 run_name: test_run
