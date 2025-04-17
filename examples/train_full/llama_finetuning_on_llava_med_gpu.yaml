@@ -5,7 +5,7 @@ model_name_or_path: /import/ml-sc-scratch3/shubhangiu/llama_3.2_checkpoints/save
 stage: sft
 do_train: true
 finetuning_type: freeze
-deepspeed: /import/ml-sc-scratch4/shubhangiu/etash_fork/LLaMA-Factory/examples/deepspeed/ds_z3_offload_config.json
+# deepspeed: /import/ml-sc-scratch4/shubhangiu/etash_fork/LLaMA-Factory/examples/deepspeed/ds_z3_offload_config.json
 
 ### dataset
 dataset: llava-med-train
