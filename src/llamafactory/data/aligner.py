@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import os
-import pandas as pd 
+import pandas as pd
 from functools import partial
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Sequence, Union
 from PIL import Image
@@ -128,13 +128,13 @@ def convert_alpaca(
         _images = convert_images(example[dataset_attr.images])
     else:
         _images = None
-    
+
     output = {
         "_prompt": prompt,
         "_response": response,
         "_system": example[dataset_attr.system] if dataset_attr.system else "",
         "_tools": example[dataset_attr.tools] if dataset_attr.tools else "",
-        "_images": _images, 
+        "_images": _images,
         "_videos": convert_videos(example[dataset_attr.videos]) if dataset_attr.videos else None,
     }
     return output
