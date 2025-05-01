@@ -1,4 +1,5 @@
 #!/bin/bash
+source /import/ml-sc-scratch6/lang/llama-custom/python3_10/bin/activate
 
 ACTUAL_CACHE=/import/ml-sc-scratch6/lang/cache/
 
