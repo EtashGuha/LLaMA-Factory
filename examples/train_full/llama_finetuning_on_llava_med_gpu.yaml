@@ -10,10 +10,10 @@ finetuning_type: freeze
 ### dataset
 dataset: llava-med-train
 template: llama3_vl
-cutoff_len: 64
+cutoff_len: 1024
 overwrite_cache: true
 preprocessing_num_workers: 4
-max_samples: 8
+# max_samples: 8
 
 ### output
 output_dir: /import/ml-sc-scratch6/lang/llama_3.2_checkpoints_gpu
